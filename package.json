@@ -1,0 +1,22 @@
+{
+  "name": "is-touch-device-javascript",
+  "version": "0.1.0",
+  "description": "Detecting if touch APIs implemented whether or not the current device has a touchscreen.",
+  "main": "dist/is-touch-device.min.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hesambayat/is-touch-device-javascript.git"
+  },
+  "author": "Hesam Bayat <hesam.bayat@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/hesambayat/is-touch-device-javascript/issues"
+  },
+  "homepage": "https://github.com/hesambayat/is-touch-device-javascript#readme",
+  "devDependencies": {
+    "express": "^4.14.0",
+    "gulp": "^3.9.1",
+    "gulp-rename": "^1.2.2",
+    "gulp-uglify": "^2.0.0"
+  }
+}

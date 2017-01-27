@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en-US" class="no-touch">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Is a touch device Javascript</title>
+    <link href="https://fonts.googleapis.com/css?family=Lora:400i|Roboto+Mono:400,500" rel="stylesheet">
+    <style>
+      html {
+        font-size: 100%;
+        height: 100%;
+        box-sizing: border-box;
+        -ms-overflow-style: scrollbar;
+      }
+
+      html:not(.is-touch) .touch--enabled {
+        display: none;
+      }
+
+      html.is-touch .touch--disabled {
+        display: none;
+      }
+
+      body {
+        height: 100%;
+        margin: 0;
+        font-size: 1em;
+        line-height: 1.5;
+        font-family: "Roboto Mono", Courier, "Courier New", monospace;
+        letter-spacing: 0.05em;
+        color: #666;
+      }
+
+      h1 {
+        padding: 0.75em 0 0;
+        margin: 0 0 1.5em;
+        font-size: 1.5em;
+        font-weight: 400;
+        font-family: inherit;
+        line-height: 1.1;
+        letter-spacing: normal;
+        color: inherit;
+      }
+
+      p {
+        margin: 1.5em 0 0;
+      }
+
+      p.result-title {
+        font-size: 2em;
+      }
+
+      a {
+        color: inherit;
+        border-bottom: dashed 1px;
+        font-style: italic;
+        font-family: "Palatino Linotype", "Book Antiqua", "Lora", Palatino, Georgia, serif;
+        letter-spacing: normal;
+        text-decoration: none;
+        transition: opacity 0.25s ease-out;
+      }
+
+      a:hover {
+        opacity: 0.75;
+      }
+
+      em {
+        font-family: "Palatino Linotype", "Book Antiqua", "Lora", Palatino, Georgia, serif;
+        letter-spacing: normal;
+      }
+
+      ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+      }
+
+      li {
+        position: relative;
+        padding-left: 2em;
+        margin-top: 1.5em;
+      }
+
+      li:before {
+        content: "\2014";
+        position: absolute;
+        left: 0;
+      }
+
+      svg {
+        display: block;
+        margin-top: 5vh;
+        margin-right: auto;
+        margin-left: auto;
+        max-width: 100%;
+        width: 10em;
+        height: 10em;
+      }
+
+      *,
+      *:before,
+      *:after {
+        box-sizing: inherit;
+      }
+
+      .statement {
+        text-align: center;
+        background-color: #ff8b8b;
+        color: #f9f8e6;
+      }
+
+      html.is-touch .statement {
+        background-color: #61bfad;
+        color: #fff;
+      }
+
+      .container {
+        width: 100%;
+        padding: 5em 2em;
+      }
+
+      @media screen and ( min-width: 49em ){
+
+        .container {
+          width: 45em;
+          margin-right: auto;
+          margin-left: auto;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="statement">
+      <div class="container">
+        <svg class="touch--enabled" fill="#f9f8e6" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+            <defs>
+                <path d="M0 0h24v24H0V0z" id="a"/>
+            </defs>
+            <clipPath id="b">
+                <use overflow="visible" xlink:href="#a"/>
+            </clipPath>
+            <path clip-path="url(#b)" d="M9 11.24V7.5C9 6.12 10.12 5 11.5 5S14 6.12 14 7.5v3.74c1.21-.81 2-2.18 2-3.74C16 5.01 13.99 3 11.5 3S7 5.01 7 7.5c0 1.56.79 2.93 2 3.74zm9.84 4.63l-4.54-2.26c-.17-.07-.35-.11-.54-.11H13v-6c0-.83-.67-1.5-1.5-1.5S10 6.67 10 7.5v10.74l-3.43-.72c-.08-.01-.15-.03-.24-.03-.31 0-.59.13-.79.33l-.79.8 4.94 4.94c.27.27.65.44 1.06.44h6.79c.75 0 1.33-.55 1.44-1.28l.75-5.27c.01-.07.02-.14.02-.2 0-.62-.38-1.16-.91-1.38z"/>
+        </svg>
+        <svg class="touch--disabled" fill="#ffffff" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0 0h24v24H0z" fill="none"/>
+            <path d="M13 1.07V9h7c0-4.08-3.05-7.44-7-7.93zM4 15c0 4.42 3.58 8 8 8s8-3.58 8-8v-4H4v4zm7-13.93C7.05 1.56 4 4.92 4 9h7V1.07z"/>
+        </svg>
+        <h1>Is Touch Device Javascript</h1>
+        <div class="touch--enabled">
+          <p class="result-title">Test result: <em>Yay! You Can Touch Me</em></p>
+          <p>Touch APIs have implemented or enabled in this browser whether or not your device has a touchscreen, <a href="https://github.com/hesambayat/is-touch-device-javascript#readme">see more</a>.</p>
+        </div>
+        <div class="touch--disabled">
+          <p class="result-title">Test result: <em>Nah! You Can't Touch This!</em></p>
+          <p>Touch APIs have <em>not</em> implemented or enabled in this browser whether or not your device has a touchscreen, <a href="https://github.com/hesambayat/is-touch-device-javascript#readme">see more</a>.</p>
+        </div>
+      </div>
+    </div>
+    <div class="info">
+      <div class="container">
+        <script src="https://gist.github.com/hesambayat/1025bf2be81fcc63b12df3cb4c20eb1f.js"></script>
+        <ul>
+          <li>Do more by <a href="https://github.com/hesambayat/is-touch-device-javascript">forking me on github</a> or <a href="https://github.com/hesambayat/is-touch-device-javascript/issues">create an issue</a> if you think something need to be fixed.</li>
+          <li>Check out <a href="https://medium.com/@david.gilbertson/the-only-way-to-detect-touch-with-javascript-7791a3346685#.qwjs2prvr" target="_blank">@davidgilbertson</a>'s article to learn more about detecting human touch, instead of browser touch.</li>
+        </ul>
+      </div>
+    </div>
+    <script src="/js/is-touch-device.min.js"></script>
+    <script>
+      (function(html){
+
+        if ( IS_TOUCH_DEVICE ){
+          // touch APIs implemented
+          // replace <html class="no-touch" > with is-touch
+          html.className = html.className.replace(/\bno-touch\b/,"is-touch");
+        }
+
+        // Update document.title
+        document.title = IS_TOUCH_DEVICE ? "Touch APIs status: ON" : "Touch APIs status: OFF";
+
+      })(document.documentElement);
+    </script>
+  </body>
+</html>
