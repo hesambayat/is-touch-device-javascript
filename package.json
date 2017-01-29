@@ -12,6 +12,10 @@
   "bugs": {
     "url": "https://github.com/hesambayat/is-touch-device-javascript/issues"
   },
+  "scripts": {
+    "build": "gulp",
+    "test": "node test/server"
+  },
   "homepage": "https://github.com/hesambayat/is-touch-device-javascript#readme",
   "devDependencies": {
     "express": "^4.14.0",

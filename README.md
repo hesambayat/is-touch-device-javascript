@@ -24,14 +24,14 @@ if ( IS_TOUCH_DEVICE ){
 ## Running the test
 
 ```shell
-$ node test/server
+$ npm test
 ```
 ... and then open a browser and go to `http://localhost:8080`
 
 ## How to build
 
 ```shell
-$ gulp
+$ npm run build
 ```
 
 ## Building details
