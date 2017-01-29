@@ -155,6 +155,21 @@
           <p>Touch APIs have <em>not</em> implemented or enabled in this browser whether or not your device has a touchscreen, <a href="https://github.com/hesambayat/is-touch-device-javascript#readme">see more</a>.</p>
         </div>
       </div>
+      <script src="../dist/is-touch-device.min.js"></script>
+      <script>
+        (function(html){
+
+          if ( IS_TOUCH_DEVICE ){
+            // touch APIs implemented
+            // replace <html class="no-touch" > with is-touch
+            html.className = html.className.replace(/\bno-touch\b/,"is-touch");
+          }
+
+          // Update document.title
+          document.title = IS_TOUCH_DEVICE ? "Touch APIs status: ON" : "Touch APIs status: OFF";
+
+        })(document.documentElement);
+      </script>
     </div>
     <div class="info">
       <div class="container">
@@ -165,20 +180,5 @@
         </ul>
       </div>
     </div>
-    <script src="../dist/is-touch-device.min.js"></script>
-    <script>
-      (function(html){
-
-        if ( IS_TOUCH_DEVICE ){
-          // touch APIs implemented
-          // replace <html class="no-touch" > with is-touch
-          html.className = html.className.replace(/\bno-touch\b/,"is-touch");
-        }
-
-        // Update document.title
-        document.title = IS_TOUCH_DEVICE ? "Touch APIs status: ON" : "Touch APIs status: OFF";
-
-      })(document.documentElement);
-    </script>
   </body>
 </html>
