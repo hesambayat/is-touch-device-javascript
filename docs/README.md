@@ -24,7 +24,7 @@ if ( IS_TOUCH_DEVICE ){
 ## Running the test
 
 ```shell
-$ npm test
+$ npm start
 ```
 ... and then open a browser and go to `http://localhost:8080`
 
