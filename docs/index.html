@@ -3,7 +3,9 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Is a touch device Javascript</title>
+    <meta name="description" content="Detecting if browser's touch APIs implemented whether or not the current device has a touchscreen.">
+    <title>Detect touch device | Javascript</title>
+    <link rel="icon" href="favicon.png" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css?family=Lora:400i|Roboto+Mono:400,500" rel="stylesheet">
     <style>
       html {
@@ -119,7 +121,53 @@
         padding: 5em 2em;
       }
 
+      footer:before,
+      footer:after {
+          content: '';
+          display: table;
+      }
+
+      footer:after {
+          clear: both;
+      }
+
+      footer a {
+          display: block;
+          background-color: #222;
+          color: #FFF;
+          font-family: inherit;
+          font-style: inherit;
+          letter-spacing: inherit;
+          border: none;
+          padding: 2em;
+      }
+
+      footer a span {
+          display: block;
+          font-size: .875em;
+          font-style: italic;
+          font-family: "Palatino Linotype", "Book Antiqua", "Lora", Palatino, Georgia, serif;
+          letter-spacing: normal;
+      }
+
+      .tooltip-javascript {
+        background-color: #6372b7;
+      }
+
+      .spark-javascript {
+        background-color: #222;
+      }
+
       @media screen and ( min-width: 49em ){
+
+        footer a {
+            width: 50%;
+            float: left;
+        }
+
+        footer a:nth-child(even) {
+            text-align: right;
+        }
 
         .container {
           width: 45em;
@@ -145,7 +193,7 @@
             <path d="M0 0h24v24H0z" fill="none"/>
             <path d="M13 1.07V9h7c0-4.08-3.05-7.44-7-7.93zM4 15c0 4.42 3.58 8 8 8s8-3.58 8-8v-4H4v4zm7-13.93C7.05 1.56 4 4.92 4 9h7V1.07z"/>
         </svg>
-        <h1>Is Touch Device Javascript</h1>
+        <h1>Is Touch Device - Javascript</h1>
         <div class="touch--enabled">
           <p class="result-title">Test result: <em>Yay! You Can Touch Me</em></p>
           <p>Touch APIs have implemented or enabled in this browser whether or not your device has a touchscreen, <a href="https://github.com/hesambayat/is-touch-device-javascript#readme">see more</a>.</p>
@@ -155,7 +203,7 @@
           <p>Touch APIs have <em>not</em> implemented or enabled in this browser whether or not your device has a touchscreen, <a href="https://github.com/hesambayat/is-touch-device-javascript#readme">see more</a>.</p>
         </div>
       </div>
-      <script src="../dist/is-touch-device.min.js"></script>
+      <script src="https://cdn.rawgit.com/hesambayat/is-touch-device-javascript/2c348d5c/dist/is-touch-device.min.js"></script>
       <script>
         (function(html){
 
@@ -175,10 +223,20 @@
       <div class="container">
         <script src="https://gist.github.com/hesambayat/1025bf2be81fcc63b12df3cb4c20eb1f.js"></script>
         <ul>
-          <li>Do more by <a href="https://github.com/hesambayat/is-touch-device-javascript">forking me on github</a> or <a href="https://github.com/hesambayat/is-touch-device-javascript/issues">create an issue</a> if you think something need to be fixed.</li>
+          <li>Do more by <a href="https://github.com/hesambayat/is-touch-device-javascript/">forking me on github</a> or <a href="https://github.com/hesambayat/is-touch-device-javascript/issues/">create an issue</a> if you think something need to be fixed.</li>
           <li>Check out <a href="https://medium.com/@david.gilbertson/the-only-way-to-detect-touch-with-javascript-7791a3346685#.qwjs2prvr" target="_blank">@davidgilbertson</a>'s article to learn more about detecting human touch, instead of browser touch.</li>
         </ul>
       </div>
     </div>
+    <footer>
+      <a class="tooltip-javascript" href="https://hesambayat.github.io/tooltip-javascript/">
+        <span>Previous</span>
+        Tooltip - Javascript
+      </a>
+      <a class="spark-javascript" href="https://hesambayat.github.io/spark-javascript/">
+        <span>Next</span>
+        Spark - Javascript
+      </a>
+    </footer>
   </body>
 </html>

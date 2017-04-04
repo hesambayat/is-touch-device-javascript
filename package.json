@@ -14,7 +14,7 @@
   },
   "scripts": {
     "build": "gulp",
-    "test": "node test/server"
+    "test": "node docs/server"
   },
   "homepage": "https://github.com/hesambayat/is-touch-device-javascript#readme",
   "devDependencies": {
